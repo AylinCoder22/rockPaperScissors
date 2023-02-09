@@ -1,4 +1,5 @@
 import random
+
 #welcomes the user to the rock paper scissorts game
 print("Welcome to the rock paper scissors game \n")
 
@@ -13,14 +14,11 @@ else:
 #three options that the computer can use for the random function
 options = ["rock","paper","scissors"]
 
-#scores = 0 for both computer / player in the beggining
-player_score = 0
-computer_score = 0 
-
-
 def game ():
 #start of the loop
-
+#scores
+    score_player = 0
+    score_computer = 0
     while True:
         # the question 
         question1= input("TYPE : rock , paper , scissors or N to quit \n")
@@ -39,16 +37,16 @@ def game ():
             print("it's a draw")
         elif question1 == "rock" and computerChoice == "scissors":
             print("You won")
-            player_score + 1
+            score_player=score_player+ 1
         elif question1 == "scissors" and computerChoice == "paper":
-            player_score + 1
             print("you won!")
+            score_player=score_player+ 1
         elif question1 == "paper" and computerChoice == "rock":
-            player_score + 1
             print("you Won!")
+            score_player=score_player+ 1
         else:
-            computer_score + 1
+            score_computer = score_computer +1
             print("you lose!")  
 
-    print(f"player total scores: {player_score}\nComputers total score:{computer_score}")
+    print(f"player total scores: {score_player}\nComputers total score:{score_computer}")
 game()
